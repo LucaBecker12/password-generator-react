@@ -8,6 +8,7 @@ input[type=checkbox], label {
     box-sizing: border-box;
     display: inline-block;
     padding: 10px 5px;
+    position: relative;
 }
 
 button {
@@ -22,6 +23,7 @@ button {
     justify-content: center;
     display: flex;
     width: 100%;
+    background-color: limegreen;
 }
 
 .input-bar * {
@@ -33,5 +35,19 @@ select{
    background-color: white;
 }
 
+textarea {
+  resize: none;
+  font-size: 18px;
+  width: 250px;
+  height: 30px;
+  border: none;
+}
+
+.options {
+    width: 30%;
+    background-color: red;
+    position: absolute;
+    left: 50px;
+}
 
 

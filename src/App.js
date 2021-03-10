@@ -25,8 +25,12 @@ function App() {
     for (let i = 0; i < parseInt(pwd_length.value); i++) {
       password += values.charAt(parseInt(Math.random() * values.length));
     }
+    
+    var passwordField = document.getElementById("password");
+    passwordField.innerHTML = password;
+    passwordField.select();
+    document.execCommand('copy');
 
-    document.getElementById("password").innerHTML = password;
   };
 
   return (
@@ -51,7 +55,7 @@ function App() {
           <option value="20">20</option>
         </select>
         <button onClick={generate}>Generate</button>
-        <p id="password" />
+        <textarea readonly id="password" />
       </div>
       <div className="options">
         <div>
